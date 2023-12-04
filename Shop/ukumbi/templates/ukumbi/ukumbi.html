@@ -1,0 +1,77 @@
+{% extends 'ukumbi/base.html'%}
+{% load static %}
+{% block content %}
+
+
+<div class="card">
+
+
+    <style>
+
+.jumbotron{margin-bottom: 0; position: relative;}
+
+.parallax {
+  /* Set a specific height */
+  height: 500px;
+
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+     #parallax-static {
+    background-image:url("  https://i2.pickpik.com/photos/1008/65/179/search-internet-online-web-preview.jpg   ")
+}
+
+
+
+
+    </style>
+
+    <br>
+    <br>
+
+
+    <div class="row">
+         {%for product in products %}
+
+        <div class="col-lg-4">
+            <div>
+
+                <div class="card" style="background-color:#" E0E0E0>
+                    <img class="thumbnail" style="height:200px;width:340px;border:6px; "
+
+                         src="{% if product.image %}{{product.image.url}}{%else%}#{% endif %}">
+
+                    <div class="box-element product">
+                        <h6><strong>{{product.name}}</strong></h6>
+                        <hr>
+
+                        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+                        <a class="btn btn-outline-success" href="#">View</a>
+                        <h4 style="display: inline-block; float: right">
+                            <bold>kes{{product.price|floatformat:2}}</bold>
+                        </h4>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        {% endfor%}
+    </div>
+
+    {% endblock content %}
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+{% extends 'ukumbi/base.html'%}
+{% block content%}
+
+
+<a class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+<br>
+<br>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="box-element" id="form-wrapper">
+            <form id="form">
+                <div id="user-info">
+                    <div class="form-field">
+                        <input required class="form-control" type="text" name="name" placeholder="Name..">
+                    </div>
+                    <div class="form-field">
+                        <input required class="form-control" type="email" name="email" placeholder="Email..">
+                    </div>
+                </div>
+
+                <div id="shipping-info">
+                    <hr>
+                    <p>Shipping Information:</p>
+                    <hr>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="address" placeholder="Address..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="city" placeholder="City..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="state" placeholder="State..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="country" placeholder="Zip code..">
+                    </div>
+                </div>
+
+                <hr>
+                <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+            </form>
+        </div>
+
+        <br>
+        <div class="box-element hidden" id="payment-info">
+            <small>Paypal Options</small>
+        </div>
+
+    </div>
+
+    <div class="col-lg-6">
+        <div class="box-element" style ="background-image:url(' https://1.bp.blogspot.com/-AXdcXiWoYE0/XjVcTcH5KcI/AAAAAAAABiE/v_pQR4FfB282YGeIolR5GCs59WQUVDhKwCPcBGAYYCw/s1600/Wrinkled-Grey-Paper-Texture-Background.jpg'  )" >
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+
+                <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart" ></i>
+        </span>
+            </h4>
+            <p><a href="#">Product 1</a> <span class="price">kes45</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p><strong>TOTAL</strong><span class="price" style="color:black"><b><strong> 45.00</strong></b></span></p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
